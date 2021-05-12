@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table BORDER="1">
+    <from
+    <tr>
+        <th>Amoust</th>
+        <th></th>
+        <th>From currency</th>
+        <th></th>
+        <th>To currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <th><input type="number" id="dulieunhap" size="30"/></th>
+        <th></th>
+        <th>
+            <select id="From_currency">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+                <option value="JPY">JPY</option>
+            </select>
+        </th>
+        <th></th>
+        <th>
+            <select id="To_currency">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+                <option value="JPY">JPY</option>
+            </select>
+        </th>
+        <th></th>
+        <th><input type="submit" id="submit" value="Convert" onclick="showKq()"/></th>
+    </tr>
+    <tr>
+        <td id="ket_qua">showKq:</td>
+    </tr>
+    </form>
+</table>
+<script>debugger
+
+function showKq() {
+    let From_currency = document.getElementById('From_currency').value;
+    let To_currency = document.getElementById('To_currency').value;
+    let dulieunhap = parseFloat(document.getElementById('dulieunhap').value);
+    let =
+    dulieunhap;
+
+
+    if (From_currency == To_currency) {
+
+        document.getElementById('ket_qua').innerHTML = dulieunhap;
+    }
+    if ((From_currency == "VND") && (To_currency == "USD")) {
+        document.getElementById('ket_qua').innerHTML = dulieunhap * 23000;
+    }
+    if ((From_currency == "VND") && (To_currency == "JPY")) {
+        document.getElementById('ket_qua').innerHTML = dulieunhap * 212,57;
+    }
+    if ((From_currency == "USD") && (To_currency == "VND")) {
+        document.getElementById('ket_qua').innerHTML = dulieunhap * 23000;
+    }
+    if ((From_currency == "USD") && (To_currency == "JPY")) {
+        document.getElementById('ket_qua').innerHTML = dulieunhap * 108.62;
+    }
+    if ((From_currency == "JPY") && (To_currency == "VND")) {
+        document.getElementById('ket_qua').innerHTML = dulieunhap * 212,57;
+    }
+    if ((From_currency == "JPY") && (To_currency == "USD")) {
+        document.getElementById('ket_qua').innerHTML = dulieunhap * 108.62;
+    }
+
+}
+
+</script>
+</body>
+</html>
